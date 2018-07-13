@@ -10,7 +10,7 @@ module.exports = (client, msg, args, opts = {}) => {
     }
 
     if (!targetGuild) {
-      console.log(targetGuilds);
+      console.log(client.guilds.map(g => g.name));
       return msg.channel.send("I can't find a guild to post to!");
     }
 
