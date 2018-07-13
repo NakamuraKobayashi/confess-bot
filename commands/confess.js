@@ -1,11 +1,13 @@
 module.exports = (client, msg, args, opts = {}) => {
   if (msg.channel.type === "dm") {
-    let targetGuild = client.guilds.filter(g => g.name.indexOf("lima")).first();
+    let targetGuild = client.guilds
+      .filter(g => g.name.indexOf("lima") === 0)
+      .first();
 
     // debug
     if (!targetGuild) {
       const targetGuild = client.guilds
-        .filter(g => g.name.indexOf("And"))
+        .filter(g => g.name.indexOf("And") === 0)
         .first();
     }
 
